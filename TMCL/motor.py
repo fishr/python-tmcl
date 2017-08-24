@@ -195,3 +195,12 @@ class AxisParameterInterface(object):
 	@left_limit_switch_disabled.setter
 	def left_limit_switch_disabled( self, value ):
 		self.set(13, 1 if value else 0)
+
+  @property
+  def encoder_position( self ):
+    return self.get(209)
+
+  @encoder_position.setter
+  def encoder_position( self, value ):
+    self.set(209, value)
+
